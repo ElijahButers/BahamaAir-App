@@ -85,7 +85,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     password.center.x -= view.bounds.width
     
     loginButton.center.y += 30.0
-    loginButton.alpha = 0.0 
+    loginButton.alpha = 0.0
     
     //Clouds
     cloud1.alpha = 0.0
@@ -109,6 +109,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
     UIView.animateWithDuration(0.5, delay: 0.7, options: [], animations: { self.cloud2.alpha = 1.0}, completion: nil)
     UIView.animateWithDuration(0.5, delay: 0.9, options: [], animations: { self.cloud3.alpha = 1.0}, completion: nil)
     UIView.animateWithDuration(0.5, delay: 1.1, options: [], animations: { self.cloud4.alpha = 1.0}, completion: nil)
+    
+    UIView.animateWithDuration(0.5, delay: 0.5, usingSpringWithDamping: 0.5, initialSpringVelocity: 1.0, options: [], animations: {
+        self.loginButton.center.y -= 30.0
+        self.loginButton.alpha = 1.0
+        }, completion: nil)
   }
     
   // MARK: further methods
