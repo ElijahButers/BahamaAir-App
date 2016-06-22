@@ -101,6 +101,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.username.center.x += self.view.bounds.width}, completion: nil)
     UIView.animateWithDuration(1, delay: 0.5, options: .CurveEaseOut, animations: {
         self.password.center.x += self.view.bounds.width}, completion: nil)
+    
+    UIView.animateWithDuration(0.5, delay: 0.5, options: [], animations: { self.cloud1.alpha = 1.0}, completion: nil)
+    UIView.animateWithDuration(0.5, delay: 0.7, options: [], animations: { self.cloud2.alpha = 1.0}, completion: nil)
+    UIView.animateWithDuration(0.5, delay: 0.9, options: [], animations: { self.cloud3.alpha = 1.0}, completion: nil)
+    UIView.animateWithDuration(0.5, delay: 1.1, options: [], animations: { self.cloud4.alpha = 1.0}, completion: nil)
   }
     
   // MARK: further methods
