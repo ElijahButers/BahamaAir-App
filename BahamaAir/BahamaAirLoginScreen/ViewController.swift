@@ -84,6 +84,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
     username.center.x -= view.bounds.width
     password.center.x -= view.bounds.width
     
+    loginButton.center.y += 30.0
+    loginButton.alpha = 0.0 
+    
     //Clouds
     cloud1.alpha = 0.0
     cloud2.alpha = 0.0
