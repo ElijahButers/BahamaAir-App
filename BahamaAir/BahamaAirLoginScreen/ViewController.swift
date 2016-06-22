@@ -83,6 +83,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
     heading.center.x -= view.bounds.width
     username.center.x -= view.bounds.width
     password.center.x -= view.bounds.width
+    
+    //Clouds
+    cloud1.alpha = 0.0
+    cloud2.alpha = 0.0
+    cloud3.alpha = 0.0
+    cloud4.alpha = 0.0
   }
   
   override func viewDidAppear(animated: Bool) {
