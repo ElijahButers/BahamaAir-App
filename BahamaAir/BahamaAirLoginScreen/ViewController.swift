@@ -88,8 +88,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
   override func viewDidAppear(animated: Bool) {
     super.viewDidAppear(animated)
     
+    UIView.animateWithDuration(0.5, animations: {
+        self.heading.center.x += self.view.bounds.width
+        self.username.center.x += self.view.bounds.width
+    })
   }
-  
+    
   // MARK: further methods
   
   @IBAction func login() {
