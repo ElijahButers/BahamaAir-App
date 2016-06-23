@@ -121,6 +121,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
   @IBAction func login() {
     view.endEditing(true)
     
+    UIView.animateWithDuration(1.5, delay: 0.0, usingSpringWithDamping: 0.2, initialSpringVelocity: 0.0, options: [], animations: {
+        self.loginButton.bounds.size.width += 80.0
+        }, completion: nil)
+    
   }
   
   // MARK: UITextFieldDelegate
