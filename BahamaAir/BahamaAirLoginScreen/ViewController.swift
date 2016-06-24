@@ -124,6 +124,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
     UIView.animateWithDuration(1.5, delay: 0.0, usingSpringWithDamping: 0.2, initialSpringVelocity: 0.0, options: [], animations: {
         self.loginButton.bounds.size.width += 80.0
         }, completion: nil)
+    UIView.animateWithDuration(0.33, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.0, options: [], animations: {
+        self.loginButton.center.y += 60.0
+        }, completion: nil)
     
   }
   
