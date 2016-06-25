@@ -140,6 +140,16 @@ class ViewController: UIViewController, UITextFieldDelegate {
     nextField.becomeFirstResponder()
     return true
   }
+    
+    func showMessage(index index: Int) {
+        label.text = messages[index]
+        
+        UIView.transitionWithView(status, duration: 0.33, options: [.CurveEaseOut, .TransitionCurlDown], animations: {
+            self.status.hidden = false
+            }, completion: {_ in
+                //
+        })
+    }
   
 }
 
