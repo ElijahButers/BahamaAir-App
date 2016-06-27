@@ -181,6 +181,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
             self.status.hidden = true
             self.status.center = self.statusPosition
             }, completion: nil)
+        
+        UIView.animateWithDuration(0.2, delay: 0.0, options: [], animations: {
+            self.spinner.center = CGPoint(x: -20.0, y: 16.0)
+            self.spinner.alpha = 0.0
+            self.loginButton.backgroundColor = UIColor(red: 0.63, green: 0.84, blue: 0.35, alpha: 1.0)
+            self.loginButton.bounds.size.width -= 80.0
+            self.loginButton.center.y -= 60.0
+            }, completion: nil)
     }
   
 }
