@@ -156,6 +156,18 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 //
         })
     }
+    
+    func removeMessage(index index: Int) {
+        
+        UIView.animateWithDuration(0.33, delay: 0.0, options: [], animations: {
+            self.status.center.x += self.view.frame.size.width
+            }, completion: {_ in
+                self.status.hidden = true
+                self.status.center = self.statusPosition
+                
+                self.showMessage(index: index + 1)
+        })
+    }
   
 }
 
