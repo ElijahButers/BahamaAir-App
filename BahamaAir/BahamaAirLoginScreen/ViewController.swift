@@ -157,7 +157,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
                     if index < self.messages.count - 1 {
                         self.removeMessage(index: index)
                     } else {
-                        //
+                        self.resetForm()
                     }
                 }
         })
@@ -173,6 +173,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 
                 self.showMessage(index: index + 1)
         })
+    }
+    
+    func resetForm() {
+        
+        UIView.transitionWithView(status, duration: 0.2, options: [.TransitionFlipFromTop], animations: {
+            self.status.hidden = true
+            self.status.center = self.statusPosition
+            }, completion: nil)
     }
   
 }
