@@ -77,6 +77,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     label.textColor = UIColor(red: 0.89, green: 0.38, blue: 0.0, alpha: 1.0)
     label.textAlignment = .Center
     status.addSubview(label)
+    
+    statusPosition = status.center
   }
   
   override func viewWillAppear(animated: Bool) {
