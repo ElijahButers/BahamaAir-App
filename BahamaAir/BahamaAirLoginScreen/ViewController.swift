@@ -47,10 +47,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
   
   // MARK: further UI
   
-  let spinner = UIActivityIndicatorView(activityIndicatorStyle: .WhiteLarge)
-  let status = UIImageView(image: UIImage(named: "banner"))
-  let label = UILabel()
-  let messages = ["Connecting ...", "Authorizing ...", "Sending credentials ...", "Failed"]
+    let spinner = UIActivityIndicatorView(activityIndicatorStyle: .WhiteLarge)
+    let status = UIImageView(image: UIImage(named: "banner"))
+    let label = UILabel()
+    let messages = ["Connecting ...", "Authorizing ...", "Sending credentials ...", "Failed"]
+    
+    var statusPosition = CGPoint.zero
   
   // MARK: view controller methods
   
