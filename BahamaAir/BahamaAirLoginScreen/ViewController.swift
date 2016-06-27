@@ -153,7 +153,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
         UIView.transitionWithView(status, duration: 0.33, options: [.CurveEaseOut, .TransitionCurlDown], animations: {
             self.status.hidden = false
             }, completion: {_ in
-                //
+                delay(seconds: 2.0) {
+                    if index < self.messages.count - 1 {
+                        self.removeMessage(index: index)
+                    } else {
+                        //
+                    }
+                }
         })
     }
     
