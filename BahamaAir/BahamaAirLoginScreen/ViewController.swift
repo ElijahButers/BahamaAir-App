@@ -118,6 +118,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.loginButton.center.y -= 30.0
         self.loginButton.alpha = 1.0
         }, completion: nil)
+    
+    animateCloud(cloud1)
+    animateCloud(cloud2)
+    animateCloud(cloud3)
+    animateCloud(cloud4)
   }
     
   // MARK: further methods
