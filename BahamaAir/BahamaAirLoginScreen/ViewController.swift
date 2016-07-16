@@ -100,6 +100,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
   override func viewDidAppear(animated: Bool) {
     super.viewDidAppear(animated)
     
+    let flyRight = CABasicAnimation(keyPath: "position.x")
+    flyRight.fromValue = -view.bounds.size.width/2
+    flyRight.toValue = view.bounds.size.width/2
+    flyRight.duration = 0.5
+    
     UIView.animateWithDuration(0.5, delay: 0.3, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.0,  options: [], animations: {
         self.username.center.x += self.view.bounds.width}, completion: nil)
     UIView.animateWithDuration(0.7, delay: 0.3, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.0, options: [], animations: {
