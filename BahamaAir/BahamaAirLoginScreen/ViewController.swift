@@ -100,9 +100,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
   override func viewDidAppear(animated: Bool) {
     super.viewDidAppear(animated)
     
-    UIView.animateWithDuration(0.6, animations: {
-        self.heading.center.x += self.view.bounds.width
-    })
     UIView.animateWithDuration(0.5, delay: 0.3, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.0,  options: [], animations: {
         self.username.center.x += self.view.bounds.width}, completion: nil)
     UIView.animateWithDuration(0.7, delay: 0.3, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.0, options: [], animations: {
