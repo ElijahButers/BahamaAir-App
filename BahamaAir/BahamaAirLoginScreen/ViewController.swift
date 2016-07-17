@@ -84,7 +84,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
   override func viewWillAppear(animated: Bool) {
     super.viewWillAppear(animated)
     
-    username.center.x -= view.bounds.width
     password.center.x -= view.bounds.width
     
     loginButton.center.y += 30.0
@@ -106,8 +105,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     flyRight.duration = 0.5
     heading.layer.addAnimation(flyRight, forKey: nil)
     
-    UIView.animateWithDuration(0.5, delay: 0.3, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.0,  options: [], animations: {
-        self.username.center.x += self.view.bounds.width}, completion: nil)
     UIView.animateWithDuration(0.7, delay: 0.3, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.0, options: [], animations: {
         self.password.center.x += self.view.bounds.width}, completion: nil)
     
