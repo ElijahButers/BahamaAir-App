@@ -104,6 +104,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     flyRight.toValue = view.bounds.size.width/2
     flyRight.duration = 0.5
     heading.layer.addAnimation(flyRight, forKey: nil)
+    username.layer.addAnimation(flyRight, forKey: nil)
     
     UIView.animateWithDuration(0.7, delay: 0.3, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.0, options: [], animations: {
         self.password.center.x += self.view.bounds.width}, completion: nil)
