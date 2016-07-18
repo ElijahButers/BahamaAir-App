@@ -95,6 +95,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     username.layer.position.x -= view.bounds.width
     password.layer.position.x -= view.bounds.width
+    
+    delay(seconds: 5.0, completion: {
+        print("Where are the fields?")
+    })
   }
   
   override func viewDidAppear(animated: Bool) {
