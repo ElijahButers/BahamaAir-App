@@ -112,8 +112,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
     flyRight.fillMode = kCAFillModeBoth
     heading.layer.addAnimation(flyRight, forKey: nil)
     username.layer.addAnimation(flyRight, forKey: nil)
+    username.layer.position.x = view.bounds.size.width/2
     flyRight.beginTime = CACurrentMediaTime() + 0.4
     password.layer.addAnimation(flyRight, forKey: nil)
+    password.layer.position.x = view.bounds.size.width/2
     
     UIView.animateWithDuration(0.5, delay: 0.5, options: [], animations: { self.cloud1.alpha = 1.0}, completion: nil)
     UIView.animateWithDuration(0.5, delay: 0.7, options: [], animations: { self.cloud2.alpha = 1.0}, completion: nil)
