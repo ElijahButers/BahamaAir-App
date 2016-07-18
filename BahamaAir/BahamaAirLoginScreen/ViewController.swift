@@ -104,6 +104,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     flyRight.toValue = view.bounds.size.width/2
     flyRight.duration = 0.5
     flyRight.beginTime = CACurrentMediaTime() + 0.3
+    flyRight.fillMode = kCAFillModeBoth
     heading.layer.addAnimation(flyRight, forKey: nil)
     username.layer.addAnimation(flyRight, forKey: nil)
     
