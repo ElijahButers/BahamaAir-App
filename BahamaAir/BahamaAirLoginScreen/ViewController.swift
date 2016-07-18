@@ -84,8 +84,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
   override func viewWillAppear(animated: Bool) {
     super.viewWillAppear(animated)
     
-    password.center.x -= view.bounds.width
-    
     loginButton.center.y += 30.0
     loginButton.alpha = 0.0
     
@@ -107,9 +105,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     flyRight.fillMode = kCAFillModeBoth
     heading.layer.addAnimation(flyRight, forKey: nil)
     username.layer.addAnimation(flyRight, forKey: nil)
-    
-    UIView.animateWithDuration(0.7, delay: 0.3, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.0, options: [], animations: {
-        self.password.center.x += self.view.bounds.width}, completion: nil)
     
     UIView.animateWithDuration(0.5, delay: 0.5, options: [], animations: { self.cloud1.alpha = 1.0}, completion: nil)
     UIView.animateWithDuration(0.5, delay: 0.7, options: [], animations: { self.cloud2.alpha = 1.0}, completion: nil)
