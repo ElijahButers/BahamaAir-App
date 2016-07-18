@@ -105,7 +105,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     super.viewDidAppear(animated)
     
     let flyRight = CABasicAnimation(keyPath: "position.x")
-    //flyRight.fromValue = -view.bounds.size.width/2
+    flyRight.fromValue = -view.bounds.size.width/2
     flyRight.toValue = view.bounds.size.width/2
     flyRight.duration = 0.5
     flyRight.beginTime = CACurrentMediaTime() + 0.3
