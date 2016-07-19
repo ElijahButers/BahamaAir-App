@@ -217,5 +217,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 self.animateCloud(cloud)
         })
     }
+    
+    func tintBackgroundColor(layer layer: CALayer, toColor: UIColor) {
+        
+        let tint = CABasicAnimation(keyPath: "backgroundColor")
+        tint.fromValue = layer.backgroundColor
+        tint.toValue = toColor.CGColor
+        tint.duration = 1.0
+        layer.addAnimation(tint, forKey: nil)
+        layer.backgroundColor = toColor.CGColor
+    }
 }
 
