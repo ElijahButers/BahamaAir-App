@@ -155,6 +155,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     let tintColor = UIColor(red: 0.85, green: 0.83, blue: 0.45, alpha: 1.0)
     tintBackgroundColor(layer: loginButton.layer, toColor: tintColor)
+    
+    roundCorners(layer: loginButton.layer, toRadius: 25.0)
   }
   
   // MARK: UITextFieldDelegate
