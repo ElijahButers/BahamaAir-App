@@ -232,5 +232,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
         layer.addAnimation(tint, forKey: nil)
         layer.backgroundColor = toColor.CGColor
     }
+    
+    func roundCorners(layer layer: CALayer, toRadius: CGFloat) {
+        
+        let round = CABasicAnimation(keyPath: "cornerRadius")
+        round.toValue = toRadius
+        round.duration = 0.33
+        layer.addAnimation(round, forKey: nil)
+        layer.cornerRadius = toRadius
+    }
 }
 
