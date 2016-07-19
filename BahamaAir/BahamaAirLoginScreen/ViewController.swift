@@ -153,6 +153,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.spinner.alpha = 1.0
         }, completion: nil)
     
+    let tintColor = UIColor(red: 0.85, green: 0.83, blue: 0.45, alpha: 1.0)
+    tintBackgroundColor(layer: loginButton.layer, toColor: tintColor)
   }
   
   // MARK: UITextFieldDelegate
