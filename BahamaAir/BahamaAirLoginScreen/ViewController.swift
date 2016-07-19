@@ -211,6 +211,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 let tintColor = UIColor(red: 0.63, green: 0.84, blue: 0.35, alpha: 1.0)
                 self.tintBackgroundColor(layer: self.loginButton.layer, toColor: tintColor)
         })
+        
+        roundCorners(layer: self.loginButton.layer, toRadius: 10.0)
     }
     
     func animateCloud(cloud: UIImageView) {
