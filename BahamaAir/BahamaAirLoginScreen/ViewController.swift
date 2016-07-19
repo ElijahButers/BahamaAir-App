@@ -93,6 +93,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
     fadeIn.toValue = 1.0
     fadeIn.duration = 0.5
     fadeIn.fillMode = kCAFillModeBackwards
+    fadeIn.beginTime = CACurrentMediaTime() + 0.5
+    cloud1.layer.addAnimation(fadeIn, forKey: nil)
+    fadeIn.beginTime = CACurrentMediaTime() + 0.7
+    cloud2.layer.addAnimation(fadeIn, forKey: nil)
+    fadeIn.beginTime = CACurrentMediaTime() + 0.9
+    cloud3.layer.addAnimation(fadeIn, forKey: nil)
+    fadeIn.beginTime = CACurrentMediaTime() + 1.1
+    cloud4.layer.addAnimation(fadeIn, forKey: nil)
     
     username.layer.position.x -= view.bounds.width
     password.layer.position.x -= view.bounds.width
