@@ -88,10 +88,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
     loginButton.alpha = 0.0
     
     //Clouds
-    cloud1.alpha = 0.0
-    cloud2.alpha = 0.0
-    cloud3.alpha = 0.0
-    cloud4.alpha = 0.0
+    let fadeIn = CABasicAnimation(keyPath: "opacity")
+    fadeIn.fromValue = 0.0
+    fadeIn.toValue = 1.0
+    fadeIn.duration = 0.5
+    fadeIn.fillMode = kCAFillModeBackwards
     
     username.layer.position.x -= view.bounds.width
     password.layer.position.x -= view.bounds.width
@@ -116,11 +117,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     flyRight.beginTime = CACurrentMediaTime() + 0.4
     password.layer.addAnimation(flyRight, forKey: nil)
     password.layer.position.x = view.bounds.size.width/2
-    
-    UIView.animateWithDuration(0.5, delay: 0.5, options: [], animations: { self.cloud1.alpha = 1.0}, completion: nil)
-    UIView.animateWithDuration(0.5, delay: 0.7, options: [], animations: { self.cloud2.alpha = 1.0}, completion: nil)
-    UIView.animateWithDuration(0.5, delay: 0.9, options: [], animations: { self.cloud3.alpha = 1.0}, completion: nil)
-    UIView.animateWithDuration(0.5, delay: 1.1, options: [], animations: { self.cloud4.alpha = 1.0}, completion: nil)
     
     UIView.animateWithDuration(0.5, delay: 0.5, usingSpringWithDamping: 0.5, initialSpringVelocity: 1.0, options: [], animations: {
         self.loginButton.center.y -= 30.0
