@@ -120,6 +120,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     flyRight.beginTime = CACurrentMediaTime() + 0.3
     flyRight.fillMode = kCAFillModeBoth
     flyRight.delegate = self
+    flyRight.setValue("form", forKey: "name")
+    flyRight.setValue(heading.layer, forKey: "layer")
     heading.layer.addAnimation(flyRight, forKey: nil)
     username.layer.addAnimation(flyRight, forKey: nil)
     username.layer.position.x = view.bounds.size.width/2
@@ -245,6 +247,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
         round.duration = 0.33
         layer.addAnimation(round, forKey: nil)
         layer.cornerRadius = toRadius
+    }
+    
+    override func animationDidStop(anim: CAAnimation, finished flag: Bool) {
+        
+        print("animation did finish")
     }
 }
 
