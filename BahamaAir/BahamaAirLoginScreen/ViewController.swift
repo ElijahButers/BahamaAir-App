@@ -123,9 +123,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
     flyRight.setValue("form", forKey: "name")
     flyRight.setValue(heading.layer, forKey: "layer")
     heading.layer.addAnimation(flyRight, forKey: nil)
+    flyRight.setValue(username.layer, forKey: "layer")
     username.layer.addAnimation(flyRight, forKey: nil)
     username.layer.position.x = view.bounds.size.width/2
     flyRight.beginTime = CACurrentMediaTime() + 0.4
+    flyRight.setValue(password.layer, forKey: "layer")
     password.layer.addAnimation(flyRight, forKey: nil)
     password.layer.position.x = view.bounds.size.width/2
     
