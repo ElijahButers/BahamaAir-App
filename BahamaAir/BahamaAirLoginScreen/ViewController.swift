@@ -254,6 +254,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func animationDidStop(anim: CAAnimation, finished flag: Bool) {
         
         print("animation did finish")
+        
+        if let name = anim.valueForKey("name") as? String {
+           if name == "form" {
+                //
+            }
+        }
     }
 }
 
