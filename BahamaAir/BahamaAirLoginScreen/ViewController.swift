@@ -257,7 +257,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         if let name = anim.valueForKey("name") as? String {
            if name == "form" {
-                //
+            let layer = anim.valueForKey("layer") as? CALayer
+            anim.setValue(nil, forKey: "layer")
+            
+            let pulse = CABasicAnimation(keyPath: "transform.scale")
+            pulse.fromValue = 1.25
+            pulse.toValue = 1.0
+            pulse.duration = 0.25
+            layer?.addAnimation(pulse, forKey: nil)
             }
         }
     }
