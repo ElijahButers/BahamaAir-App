@@ -53,6 +53,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     let messages = ["Connecting ...", "Authorizing ...", "Sending credentials ...", "Failed"]
     
     var statusPosition = CGPoint.zero
+    var info = UILabel()
   
   // MARK: view controller methods
   
