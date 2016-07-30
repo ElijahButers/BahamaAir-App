@@ -149,6 +149,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
     animateCloud(cloud2)
     animateCloud(cloud3)
     animateCloud(cloud4)
+    
+    let flyLeft = CABasicAnimation(keyPath: "position.x")
+    flyLeft.fromValue = info.layer.position.x + view.frame.size.width
+    flyLeft.toValue = info.layer.position.x
+    flyLeft.duration = 5.0
+    info.layer.addAnimation(flyLeft, forKey: "infoappear")
   }
     
   // MARK: further methods
