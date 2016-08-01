@@ -31,7 +31,7 @@ func delay(seconds seconds: Double, completion:()->()) {
   }
 }
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class ViewController: UIViewController {
   
   // MARK: IB outlets
   
@@ -288,6 +288,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
             layer?.addAnimation(pulse, forKey: nil)
             }
         }
+    }
+}
+
+extension ViewController: UITextFieldDelegate {
+    func textFieldDidEndEditing(textField: UITextField) {
+        print(info.layer.animationKeys())
     }
 }
 
