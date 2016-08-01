@@ -117,9 +117,6 @@ class ViewController: UIViewController {
     delay(seconds: 5.0, completion: {
         print("Where are the fields?")
     })
-    
-    username.delegate = self
-    password.delegate = self
   }
   
   override func viewDidAppear(animated: Bool) {
@@ -164,6 +161,9 @@ class ViewController: UIViewController {
     fadeLabelIn.toValue = 1.0
     fadeLabelIn.duration = 4.5
     view.layer.addAnimation(fadeLabelIn, forKey: "fadein")
+    
+    username.delegate = self
+    password.delegate = self
   }
     
   // MARK: further methods
@@ -295,7 +295,7 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: UITextFieldDelegate {
-    func textFieldDidEndEditing(textField: UITextField) {
+    func textFieldDidBeginEditing(textField: UITextField) {
         print(info.layer.animationKeys())
     }
 }
