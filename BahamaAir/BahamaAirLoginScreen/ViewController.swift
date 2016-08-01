@@ -297,6 +297,7 @@ class ViewController: UIViewController {
 extension ViewController: UITextFieldDelegate {
     func textFieldDidBeginEditing(textField: UITextField) {
         print(info.layer.animationKeys())
+        info.layer.removeAnimationForKey("infoappear")
     }
 }
 
