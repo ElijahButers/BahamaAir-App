@@ -117,6 +117,9 @@ class ViewController: UIViewController {
     delay(seconds: 5.0, completion: {
         print("Where are the fields?")
     })
+    
+    username.delegate = self
+    password.delegate = self
   }
   
   override func viewDidAppear(animated: Bool) {
