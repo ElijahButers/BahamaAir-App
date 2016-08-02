@@ -244,16 +244,18 @@ class ViewController: UIViewController {
         roundCorners(layer: self.loginButton.layer, toRadius: 10.0)
     }
     
-    func animateCloud(cloud: UIImageView) {
+    func animateCloud(layer: CALayer) {
         
-        let cloudSpeed = 60.0 / view.frame.size.width
-        let duration = (view.frame.size.width - cloud.frame.origin.x) * cloudSpeed
-        UIView.animateWithDuration(NSTimeInterval(duration), delay: 0.0, options: .CurveLinear, animations: {
-            cloud.frame.origin.x = self.view.frame.size.width
-            }, completion: {_ in
-                cloud.frame.origin.x = -cloud.frame.size.width
-                self.animateCloud(cloud)
-        })
+        let cloudSpeed = 60.0 / Double(view.layer.frame.size.width)
+        let duration: NSTimeInterval = Double(view.layer.frame.size.width - layer.frame.origin.x) * cloudSpeed
+        
+        let cloudMove = CABasicAnimation(keyPath: "position.x")
+        cloudMove.duration = duration
+        cloudMove.toValue = self.view.bounds.size.width + layer.bounds.width/2
+        cloudMove.delegate = self
+        cloudMove.setValue("cloud", forKey: "name")
+        cloudMove.setValue(layer, forKey: "layer")
+        layer.addAnimation(cloudMove, forKey: nil)
     }
     
     func tintBackgroundColor(layer layer: CALayer, toColor: UIColor) {
