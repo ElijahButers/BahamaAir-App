@@ -292,6 +292,17 @@ class ViewController: UIViewController {
             pulse.duration = 0.25
             layer?.addAnimation(pulse, forKey: nil)
             }
+            
+            if name == "cloud" {
+                if let layer = anim.valueForKey("layer") as? CALayer {
+                    anim.setValue(nil, forKey: "layer")
+                    
+                    layer.position.x = -layer.bounds.width/2
+                    delay(seconds: 0.5, completion: {
+                        self.animateCloud(layer)
+                    })
+                }
+            }
         }
     }
 }
