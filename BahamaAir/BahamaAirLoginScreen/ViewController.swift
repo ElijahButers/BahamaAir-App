@@ -145,10 +145,10 @@ class ViewController: UIViewController {
         self.loginButton.alpha = 1.0
         }, completion: nil)
     
-    animateCloud(cloud1)
-    animateCloud(cloud2)
-    animateCloud(cloud3)
-    animateCloud(cloud4)
+    animateCloud(cloud1.layer)
+    animateCloud(cloud2.layer)
+    animateCloud(cloud3.layer)
+    animateCloud(cloud4.layer)
     
     let flyLeft = CABasicAnimation(keyPath: "position.x")
     flyLeft.fromValue = info.layer.position.x + view.frame.size.width
