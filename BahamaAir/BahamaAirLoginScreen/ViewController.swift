@@ -137,11 +137,6 @@ class ViewController: UIViewController {
     password.layer.addAnimation(flyRight, forKey: nil)
     password.layer.position.x = view.bounds.size.width/2
     
-    UIView.animateWithDuration(0.5, delay: 0.5, usingSpringWithDamping: 0.5, initialSpringVelocity: 1.0, options: [], animations: {
-        self.loginButton.center.y -= 30.0
-        self.loginButton.alpha = 1.0
-        }, completion: nil)
-    
     animateCloud(cloud1.layer)
     animateCloud(cloud2.layer)
     animateCloud(cloud3.layer)
