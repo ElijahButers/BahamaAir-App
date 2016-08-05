@@ -167,6 +167,10 @@ class ViewController: UIViewController {
     rotate.fromValue = CGFloat(M_PI_4)
     rotate.toValue = 0.0
     
+    let fade = CABasicAnimation(keyPath: "opaacity")
+    fade.fromValue = 0.0
+    fade.toValue = 1.0
+    
     username.delegate = self
     password.delegate = self
   }
