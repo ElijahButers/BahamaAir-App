@@ -171,6 +171,9 @@ class ViewController: UIViewController {
     fade.fromValue = 0.0
     fade.toValue = 1.0
     
+    groupAnimation.animations = [scaleDown, rotate, fade]
+    loginButton.layer.addAnimation(groupAnimation, forKey: nil)
+    
     username.delegate = self
     password.delegate = self
   }
