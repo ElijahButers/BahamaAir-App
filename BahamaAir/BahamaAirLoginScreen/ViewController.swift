@@ -93,9 +93,6 @@ class ViewController: UIViewController {
   override func viewWillAppear(animated: Bool) {
     super.viewWillAppear(animated)
     
-    loginButton.center.y += 30.0
-    loginButton.alpha = 0.0
-    
     //Clouds
     let fadeIn = CABasicAnimation(keyPath: "opacity")
     fadeIn.fromValue = 0.0
