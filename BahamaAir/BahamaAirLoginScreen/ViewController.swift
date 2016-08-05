@@ -159,6 +159,10 @@ class ViewController: UIViewController {
     groupAnimation.duration = 0.5
     groupAnimation.fillMode = kCAFillModeBackwards
     
+    let scaleDown = CABasicAnimation(keyPath: "transform.scale")
+    scaleDown.fromValue = 3.5
+    scaleDown.toValue = 1.0
+    
     username.delegate = self
     password.delegate = self
   }
