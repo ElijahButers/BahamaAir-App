@@ -154,6 +154,11 @@ class ViewController: UIViewController {
     fadeLabelIn.duration = 4.5
     view.layer.addAnimation(fadeLabelIn, forKey: "fadein")
     
+    let groupAnimation = CAAnimationGroup()
+    groupAnimation.beginTime = CACurrentMediaTime() + 0.5
+    groupAnimation.duration = 0.5
+    groupAnimation.fillMode = kCAFillModeBackwards
+    
     username.delegate = self
     password.delegate = self
   }
