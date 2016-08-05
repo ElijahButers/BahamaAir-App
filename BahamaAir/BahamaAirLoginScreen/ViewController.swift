@@ -163,11 +163,11 @@ class ViewController: UIViewController {
     scaleDown.fromValue = 3.5
     scaleDown.toValue = 1.0
     
-    let rotate = CABasicAnimation(keyPath: "transfrom.rotate")
+    let rotate = CABasicAnimation(keyPath: "transform.rotation")
     rotate.fromValue = CGFloat(M_PI_4)
     rotate.toValue = 0.0
     
-    let fade = CABasicAnimation(keyPath: "opaacity")
+    let fade = CABasicAnimation(keyPath: "opacity")
     fade.fromValue = 0.0
     fade.toValue = 1.0
     
