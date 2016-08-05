@@ -163,6 +163,10 @@ class ViewController: UIViewController {
     scaleDown.fromValue = 3.5
     scaleDown.toValue = 1.0
     
+    let rotate = CABasicAnimation(keyPath: "transfrom.rotate")
+    rotate.fromValue = CGFloat(M_PI_4)
+    rotate.toValue = 0.0
+    
     username.delegate = self
     password.delegate = self
   }
