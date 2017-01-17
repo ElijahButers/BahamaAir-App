@@ -31,7 +31,7 @@ func delay(seconds: Double, completion:@escaping ()->()) {
   }
 }
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, CAAnimationDelegate {
   
   // MARK: IB outlets
   
@@ -291,7 +291,7 @@ class ViewController: UIViewController {
         layer.cornerRadius = toRadius
     }
     
-    override func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
+    func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
         
         print("animation did finish")
         
@@ -323,7 +323,7 @@ class ViewController: UIViewController {
 
 extension ViewController: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        print(info.layer.animationKeys())
+        print(info.layer.animationKeys() as Any)
         info.layer.removeAnimation(forKey: "infoappear")
     }
 }
