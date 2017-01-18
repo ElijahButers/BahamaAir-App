@@ -119,23 +119,9 @@ class ViewController: UIViewController, CAAnimationDelegate {
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
     
-//    let flyRight = CABasicAnimation(keyPath: "position.x")
-//    flyRight.fromValue = -view.bounds.size.width/2
-//    flyRight.toValue = view.bounds.size.width/2
-//    flyRight.duration = 0.5
-//    flyRight.beginTime = CACurrentMediaTime() + 0.3
-//    flyRight.fillMode = kCAFillModeBoth
-//    flyRight.delegate = self
-//    flyRight.setValue("form", forKey: "name")
-//    flyRight.setValue(heading.layer, forKey: "layer")
-//    heading.layer.add(flyRight, forKey: nil)
-//    flyRight.setValue(username.layer, forKey: "layer")
-//    username.layer.add(flyRight, forKey: nil)
-//    username.layer.position.x = view.bounds.size.width/2
-//    flyRight.beginTime = CACurrentMediaTime() + 0.4
-//    flyRight.setValue(password.layer, forKey: "layer")
-//    password.layer.add(flyRight, forKey: nil)
-//    password.layer.position.x = view.bounds.size.width/2
+    let formGroup = CAAnimationGroup()
+    formGroup.duration = 0.5
+    formGroup.fillMode = kCAFillModeBackwards
     
     animateCloud(cloud1.layer)
     animateCloud(cloud2.layer)
