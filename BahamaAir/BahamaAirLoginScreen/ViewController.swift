@@ -131,6 +131,11 @@ class ViewController: UIViewController, CAAnimationDelegate {
     fadeFieldIn.fromValue = 0.25
     fadeFieldIn.toValue = 1.0
     
+    formGroup.animations = [flyRight, fadeFieldIn]
+    heading.layer.add(formGroup, forKey: nil)
+    username.layer.add(formGroup, forKey: nil)
+    password.layer.add(formGroup, forKey: nil)
+    
     animateCloud(cloud1.layer)
     animateCloud(cloud2.layer)
     animateCloud(cloud3.layer)
