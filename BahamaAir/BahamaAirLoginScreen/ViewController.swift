@@ -123,6 +123,10 @@ class ViewController: UIViewController, CAAnimationDelegate {
     formGroup.duration = 0.5
     formGroup.fillMode = kCAFillModeBackwards
     
+    let flyRight = CABasicAnimation(keyPath: "position.x")
+    flyRight.fromValue = -view.bounds.size.width/2
+    flyRight.toValue = view.bounds.size.width/2
+    
     animateCloud(cloud1.layer)
     animateCloud(cloud2.layer)
     animateCloud(cloud3.layer)
