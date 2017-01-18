@@ -127,6 +127,10 @@ class ViewController: UIViewController, CAAnimationDelegate {
     flyRight.fromValue = -view.bounds.size.width/2
     flyRight.toValue = view.bounds.size.width/2
     
+    let fadeFieldIn = CABasicAnimation(keyPath: "opacity")
+    fadeFieldIn.fromValue = 0.25
+    fadeFieldIn.toValue = 1.0
+    
     animateCloud(cloud1.layer)
     animateCloud(cloud2.layer)
     animateCloud(cloud3.layer)
