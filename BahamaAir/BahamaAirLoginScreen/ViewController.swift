@@ -108,8 +108,8 @@ class ViewController: UIViewController, CAAnimationDelegate {
     fadeIn.beginTime = CACurrentMediaTime() + 1.1
     cloud4.layer.add(fadeIn, forKey: nil)
     
-    username.layer.position.x -= view.bounds.width
-    password.layer.position.x -= view.bounds.width
+    //username.layer.position.x -= view.bounds.width
+    //password.layer.position.x -= view.bounds.width
     
     delay(seconds: 5.0, completion: {
         print("Where are the fields?")
