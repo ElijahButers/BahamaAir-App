@@ -133,7 +133,15 @@ class ViewController: UIViewController, CAAnimationDelegate {
     
     formGroup.animations = [flyRight, fadeFieldIn]
     heading.layer.add(formGroup, forKey: nil)
+    formGroup.delegate = self
+    formGroup.setValue("form", forUndefinedKey: "name")
+    formGroup.setValue(username.layer, forUndefinedKey: "layer")
+    
+    formGroup.beginTime = CACurrentMediaTime() + 0.3
     username.layer.add(formGroup, forKey: nil)
+    
+    formGroup.setValue(password.layer, forUndefinedKey: "layer")
+    formGroup.beginTime = CACurrentMediaTime() + 0.4
     password.layer.add(formGroup, forKey: nil)
     
     animateCloud(cloud1.layer)
