@@ -339,7 +339,10 @@ extension ViewController: UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         
-        
+        if (textField.text?.characters.count)! < 5 {
+            
+            // Animations
+        }
     }
 }
 
