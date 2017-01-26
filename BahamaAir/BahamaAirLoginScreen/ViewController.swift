@@ -342,6 +342,11 @@ extension ViewController: UITextFieldDelegate {
         if (textField.text?.characters.count)! < 5 {
             
             // Animations
+            let jump = CASpringAnimation(keyPath: "position.y")
+            jump.fromValue = textField.layer.position.y + 1.0
+            jump.toValue = textField.layer.position.y
+            jump.duration = jump.settlingDuration
+            textField.layer.add(jump, forKey: nil)
         }
     }
 }
