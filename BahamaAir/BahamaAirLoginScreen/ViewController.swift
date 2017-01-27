@@ -354,6 +354,14 @@ extension ViewController: UITextFieldDelegate {
             
             textField.layer.borderWidth = 3.0
             textField.layer.borderColor = UIColor.clear.cgColor
+            
+            let flash = CASpringAnimation(keyPath: "borderColor")
+            flash.damping = 7.0
+            flash.stiffness = 200.0
+            flash.fromValue = UIColor(red: 0.96, green: 0.27, blue: 0.0, alpha: 1.0).cgColor
+            flash.toValue = UIColor.clear.cgColor
+            flash.duration = flash.settlingDuration
+            textField.layer.add(flash, forKey: nil)
         }
     }
 }
