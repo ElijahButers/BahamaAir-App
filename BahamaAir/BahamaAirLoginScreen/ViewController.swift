@@ -351,6 +351,9 @@ extension ViewController: UITextFieldDelegate {
             jump.toValue = textField.layer.position.y
             jump.duration = jump.settlingDuration
             textField.layer.add(jump, forKey: nil)
+            
+            textField.layer.borderWidth = 3.0
+            textField.layer.borderColor = UIColor.clear.cgColor
         }
     }
 }
