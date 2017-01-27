@@ -344,6 +344,7 @@ extension ViewController: UITextFieldDelegate {
             // Animations
             let jump = CASpringAnimation(keyPath: "position.y")
             jump.initialVelocity = 100.0
+            jump.mass = 10.0
             jump.fromValue = textField.layer.position.y + 1.0
             jump.toValue = textField.layer.position.y
             jump.duration = jump.settlingDuration
