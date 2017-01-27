@@ -346,6 +346,7 @@ extension ViewController: UITextFieldDelegate {
             jump.initialVelocity = 100.0
             jump.mass = 10.0
             jump.stiffness = 1500.0
+            jump.damping = 50.0
             jump.fromValue = textField.layer.position.y + 1.0
             jump.toValue = textField.layer.position.y
             jump.duration = jump.settlingDuration
