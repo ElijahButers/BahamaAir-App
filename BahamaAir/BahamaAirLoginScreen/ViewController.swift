@@ -291,9 +291,11 @@ class ViewController: UIViewController, CAAnimationDelegate {
     
     func roundCorners(layer: CALayer, toRadius: CGFloat) {
         
-        let round = CABasicAnimation(keyPath: "cornerRadius")
+        let round = CASpringAnimation(keyPath: "cornerRadius")
+        round.damping = 5.0
+        round.fromValue = layer.cornerRadius
         round.toValue = toRadius
-        round.duration = 0.33
+        round.duration = round.settlingDuration
         layer.add(round, forKey: nil)
         layer.cornerRadius = toRadius
     }
