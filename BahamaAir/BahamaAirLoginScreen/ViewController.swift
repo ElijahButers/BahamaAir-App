@@ -281,10 +281,12 @@ class ViewController: UIViewController, CAAnimationDelegate {
     
     func tintBackgroundColor(layer: CALayer, toColor: UIColor) {
         
-        let tint = CABasicAnimation(keyPath: "backgroundColor")
+        let tint = CASpringAnimation(keyPath: "backgroundColor")
+        tint.damping = 5.0
+        tint.initialVelocity = -10.0
         tint.fromValue = layer.backgroundColor
         tint.toValue = toColor.cgColor
-        tint.duration = 1.0
+        tint.duration = tint.settlingDuration
         layer.add(tint, forKey: nil)
         layer.backgroundColor = toColor.cgColor
     }
