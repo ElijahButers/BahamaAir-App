@@ -216,6 +216,8 @@ class ViewController: UIViewController, CAAnimationDelegate {
     let ballon = CALayer()
     ballon.contents = UIImage(named: "balloon")?.cgImage
     ballon.frame = CGRect(x: 50.0, y: 0.0, width: 50.0, height: 65.0)
+    ballon.add(flight, forKey: nil)
+    ballon.position = CGPoint(x: -50.0, y: loginButton.center.y)
     view.layer.insertSublayer(ballon, below: username.layer)
     
   }
