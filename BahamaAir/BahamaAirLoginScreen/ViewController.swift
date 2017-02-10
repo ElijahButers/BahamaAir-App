@@ -212,6 +212,9 @@ class ViewController: UIViewController, CAAnimationDelegate {
     ballon.contents = UIImage(named: "ballon")?.cgImage
     ballon.frame = CGRect(x: 50.0, y: 0.0, width: 50.0, height: 65.0)
     view.layer.insertSublayer(ballon, below: username.layer)
+    
+    let flight = CAKeyframeAnimation(keyPath: "position")
+    flight.duration = 12.0
   }
   
   // MARK: UITextFieldDelegate
