@@ -208,13 +208,16 @@ class ViewController: UIViewController, CAAnimationDelegate {
     
     roundCorners(layer: loginButton.layer, toRadius: 25.0)
     
+    let flight = CAKeyframeAnimation(keyPath: "position")
+    flight.duration = 12.0
+    flight.values = [CGPoint(x: -50.0, y: 0.0), CGPoint(x: view.frame.width + 50.0, y: 160.0), CGPoint(x: -50.0, y: loginButton.center.y)].map { NSValue(cgPoint: $0) }
+    flight.keyTimes = [0.0, 0.5, 1.0]
+    
     let ballon = CALayer()
-    ballon.contents = UIImage(named: "ballon")?.cgImage
+    ballon.contents = UIImage(named: "balloon")?.cgImage
     ballon.frame = CGRect(x: 50.0, y: 0.0, width: 50.0, height: 65.0)
     view.layer.insertSublayer(ballon, below: username.layer)
     
-    let flight = CAKeyframeAnimation(keyPath: "position")
-    flight.duration = 12.0
   }
   
   // MARK: UITextFieldDelegate
